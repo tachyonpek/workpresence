@@ -40,6 +40,37 @@ public class Vypis7
 
         System.out.println(prvnidenvtydnu) ;
 
+        try
+        {
+            table.open(IfNonExistent.ERROR);
+
+            System.out.println("FIELDS (COLUMNS)");
+
+            final List<Field> fields = table.getFields();
+
+            for(final Field field: fields)
+            {
+                System.out.println("  Name       : " + field.getName());
+                System.out.println("  Type       : " + field.getType());
+                System.out.println("  Length     : " + field.getLength());
+                System.out.println("  Dec. Count : " + field.getDecimalCount());
+                System.out.println();
+            }
+
+            System.out.println("--------------");
+            System.out.println();
+            System.out.println("RECORDS");
+
+            final Iterator<Record> recordIterator = table.recordIterator();
+            int count = 0;
+
+            while(recordIterator.hasNext())
+            {
+
+            }
+
+
+
     }
 
 }

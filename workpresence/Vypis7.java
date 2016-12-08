@@ -44,6 +44,12 @@ public class Vypis7
         {
             table.open(IfNonExistent.ERROR);
 
+            final Format dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            System.out.println("TABLE PROPERTIES");
+            System.out.println("Name          : " + table.getName());
+            System.out.println("Last Modified : " + dateFormat.format(table.getLastModifiedDate()));
+            System.out.println("--------------");
+            System.out.println();
             System.out.println("FIELDS (COLUMNS)");
 
             final List<Field> fields = table.getFields();

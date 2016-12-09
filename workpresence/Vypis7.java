@@ -75,6 +75,19 @@ public class Vypis7
 
             }
 
+        }
+        catch(IOException ioe)
+        {
+            System.out.println("Trouble reading table or table not found");
+            ioe.printStackTrace();
+        }
+        catch(DbfLibException dbflibException)
+        {
+            System.out.println("Problem getting raw value");
+            dbflibException.printStackTrace();
+        }
+
+
 
 
     }

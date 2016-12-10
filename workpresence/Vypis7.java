@@ -23,6 +23,23 @@ public class Vypis7
 {
     public static void main(String[] args)
     {
+        int hodina;
+        int minuta;
+        int mes;
+        int denvmes;
+        int minutzaden;
+        int minutzatyden = 0;
+        int mabytzatyden = 0;
+        int minutaudalosti;
+        int minutaudalosti1 = 0;
+        int minutaudalosti2 = 0;
+        int predchminutaudalosti = 0;
+        int currentDenVMes = 0;
+        int pocetpovinnychdnu = 0;
+        int odpracovanoZaDanyDenMinut = 0;
+        int kumulOdpracovanoZaDanyDenMinut = 0;
+        int zbytkoveminuty;
+        boolean pracuji = false;
         if(args.length != 0)
         {
             System.out.println("One argument required: table to dump");
@@ -70,6 +87,10 @@ public class Vypis7
             final Iterator<Record> recordIterator = table.recordIterator();
             int count = 0;
 
+            pracuji = false; // nepouziva se
+            minutaudalosti1 = 0;
+            minutaudalosti2 = 0;
+            predchminutaudalosti = 0;
             while(recordIterator.hasNext())
             {
 

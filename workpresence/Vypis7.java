@@ -96,7 +96,8 @@ public class Vypis7
                 final Record record = recordIterator.next();
                 if (record.getNumberValue("CISLO").longValue() == new Long(1255)) // 189 
                 {
-                    System.out.println(record.getNumberValue("HOD").intValue());
+                    System.out.print(record.getNumberValue("HOD").intValue() + ":");
+                    System.out.println(record.getNumberValue("MIN").intValue());
                 }
 
             }

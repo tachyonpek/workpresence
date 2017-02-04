@@ -98,6 +98,7 @@ public class Vypis7
                 {
                     System.out.print(record.getNumberValue("HOD").intValue() + ":");
                     System.out.println(record.getNumberValue("MIN").intValue());
+                    System.out.println("-----"); 
                 }
 
             }
